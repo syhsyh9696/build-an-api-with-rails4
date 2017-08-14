@@ -92,6 +92,7 @@ GEM
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.8)
+    rack-cors (1.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -174,6 +175,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   pundit
+  rack-cors
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

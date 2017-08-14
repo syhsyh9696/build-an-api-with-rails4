@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pundit'
 
 gem 'kaminari'
+
+gem 'rack-cors'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
