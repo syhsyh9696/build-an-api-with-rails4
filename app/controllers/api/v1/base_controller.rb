@@ -12,6 +12,9 @@ class Api::V1::BaseController < ApplicationController
 
   attr_accessor :current_user
 
+  # rescue Pundit error
+  rescue_from Pundit::NotAuthorizedError, with: :deny_access
+
   def destroy_session
     request.session_options[:skip] = true
   end
@@ -35,5 +38,9 @@ class Api::V1::BaseController < ApplicationController
 
   def unauthenticated!
     api_error(status: 401)
+  end
+
+  def deny_access
+    api_error(status: 403)
   end
 end
